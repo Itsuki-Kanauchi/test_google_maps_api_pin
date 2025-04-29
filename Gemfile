@@ -61,3 +61,4 @@ gem "tailwindcss-ruby", "3.4.17"
 
 gem "dotenv-rails"
 gem "geocoder"
+gem "faker"
