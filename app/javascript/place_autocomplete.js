@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // HTML要素（インプット要素）を取得
   const inputTitle = document.getElementById('Title');
   const inputAddress = document.getElementById('Address');
+  const inputLat = document.getElementById('Latitude');
+  const inputLng = document.getElementById('Longitude');
 
   // オプションを作成
   const options = {
@@ -18,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const place = autocompleteTitle.getPlace();
     inputTitle.value = place.name;
     inputAddress.value = place.formatted_address;
+    inputLat.value = place.geometry.location.lat();
+    inputLng.value = place.geometry.location.lng();
   });
 
   // 住所候補から選択されたときにタイトルと住所を補完
@@ -25,5 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const place = autocompleteAddress.getPlace();
     inputTitle.value = place.name;
     inputAddress.value = place.formatted_address;    
+    inputLat.value = place.geometry.location.lat();
+    inputLng.value = place.geometry.location.lng();
   });
 });

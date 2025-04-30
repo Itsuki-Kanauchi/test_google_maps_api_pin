@@ -9,6 +9,9 @@
       <%= f.text_field :address, id: "Address", placeholder: "住所を入力してください", autocomplete: "off" %>
     </div>
 
+    <%= f.hidden_field :latitude, id: "Latitude" %>
+    <%= f.hidden_field :longitude, id: "Longitude" %>
+
     <%= f.submit %>
   <% end %>
 </div>
