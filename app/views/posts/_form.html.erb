@@ -2,11 +2,11 @@
   <%= form_with model: post, local: true do |f| %>
     <div>
       <%= f.label :title %>
-      <%= f.text_field :title, placeholder: "スポット名を入力してください" %>
+      <%= f.text_field :title, id: "Title", placeholder: "スポット名を入力してください", autocomplete: "off" %>
     </div>
     <div>
       <%= f.label :address %>
-      <%= f.text_field :address, placeholder: "住所を入力してください" %>
+      <%= f.text_field :address, id: "Address", placeholder: "住所を入力してください", autocomplete: "off" %>
     </div>
 
     <%= f.submit %>
